@@ -22,6 +22,12 @@ public class Courier {
     public static Courier random() {
         return new Courier(RandomStringUtils.randomAlphabetic(5,15), "1111", "Vadik");
     }
+    public static Courier withoutLoggin(){
+        return new Courier(null, "1234", "Saske");
+    }
+    public static Courier withoutPassword(){
+        return new Courier(RandomStringUtils.randomAlphabetic(5,15), null, "Saske");
+    }
 
     public String getLogin() {
         return login;

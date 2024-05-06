@@ -32,4 +32,25 @@ public class CreatingCourierTest {
 
         assertNotEquals(0, courierId);
     }
+    @DisplayName("courier existing path")
+    @Test
+    public void creatingExistingCourier() {
+        var courier = Courier.generic();
+        ValidatableResponse createResponse = client.createCourier(courier);
+        check.createdExistingCourier(createResponse);
+    }
+    @DisplayName("courier creating without lastName")
+    @Test
+    public void creatingCourierWithoutLastName() {
+        var courier = Courier.withoutLoggin();
+        ValidatableResponse creatResponse = client.createCourierWithoutLoggin(courier);
+        check.didntCreateCourier(creatResponse);
+    }
+    @DisplayName("courier creating without password")
+    @Test
+    public void creatingCourierWithoutPassword() {
+        var courier = Courier.withoutPassword();
+        ValidatableResponse creatResponse = client.createCourierWithoutPassword(courier);
+        check.didntCreateCourier(creatResponse);
+    }
 }
