@@ -4,8 +4,6 @@ import io.qameta.allure.Step;
 import io.restassured.response.ValidatableResponse;
 import org.example.Client;
 
-import java.util.Map;
-
 public class CourierClient extends Client {
     public static final String COURIER_PATH = "/courier";
 

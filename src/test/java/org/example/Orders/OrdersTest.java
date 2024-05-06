@@ -1,5 +1,6 @@
 package org.example.Orders;
 
+import io.qameta.allure.junit4.DisplayName;
 import io.restassured.response.ValidatableResponse;
 import org.junit.After;
 import org.junit.Test;
@@ -52,6 +53,7 @@ public class OrdersTest {
         ValidatableResponse cancelResponse = orderClient.cancelOrder(orderTrack);
         orderChecks.orderCanceled(cancelResponse);
     }
+    @DisplayName("creat order parametrized color")
     @Test
     public void ordersParametrizedTest() {
         Order order = new Order();

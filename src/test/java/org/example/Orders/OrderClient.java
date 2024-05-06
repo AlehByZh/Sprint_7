@@ -1,13 +1,13 @@
 package org.example.Orders;
 
+import io.qameta.allure.Step;
 import io.restassured.response.ValidatableResponse;
 import org.example.Client;
-
-import static io.restassured.RestAssured.given;
 
 public class OrderClient extends Client {
     public static final String ORDER_PATH = "/orders";
 
+    @Step("creat order")
     public ValidatableResponse creatOrder(Order order) {
         return spec()
                 .body(order)
@@ -16,6 +16,7 @@ public class OrderClient extends Client {
                 .then().log().all();
     }
 
+    @Step("cancel order")
     public ValidatableResponse cancelOrder(int track) {
         OrderTrack orderTrack = new OrderTrack(track);
         return spec()

@@ -1,8 +1,5 @@
 package org.example.Orders;
 
-import org.example.Courier.Courier;
-
-import java.lang.reflect.Array;
 import java.util.List;
 
 public class Order {

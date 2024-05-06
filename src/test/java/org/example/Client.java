@@ -1,7 +1,6 @@
 package org.example;
 
 import io.restassured.specification.RequestSpecification;
-import org.example.Courier.Courier;
 
 import static io.restassured.RestAssured.given;
 import static io.restassured.http.ContentType.JSON;
