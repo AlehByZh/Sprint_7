@@ -17,8 +17,8 @@ public class OrderChecks {
         return track;
     }
     @Step("check order is canceled")
-    public void orderCanceled(ValidatableResponse cancelRespose) {
-        boolean canceled = cancelRespose
+    public void orderCanceled(ValidatableResponse cancelResponse) {
+        boolean canceled = cancelResponse
                 .assertThat()
                 .statusCode(HTTP_OK)
                 .extract()

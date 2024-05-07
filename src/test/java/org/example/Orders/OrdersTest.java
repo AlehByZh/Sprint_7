@@ -18,15 +18,15 @@ public class OrdersTest {
     private final OrderClient orderClient = new OrderClient();
     private final OrderChecks orderChecks = new OrderChecks();
     int orderTrack;
-    private String firstName;
-    private String lastName;
-    private String address;
-    private int metroStation;
-    private String phone;
-    private int rentTime;
-    private String deliveryDate;
-    private String comment;
-    private List<String> color;
+    private final String firstName;
+    private final String lastName;
+    private final String address;
+    private final int metroStation;
+    private final String phone;
+    private final int rentTime;
+    private final String deliveryDate;
+    private final String comment;
+    private final List<String> color;
 
     public OrdersTest(String firstName, String lastName, String address, int metroStation, String phone, int rentTime, String deliveryDate, String comment, List<String> color) {
         this.firstName = firstName;

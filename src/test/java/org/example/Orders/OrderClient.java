@@ -7,6 +7,14 @@ import org.example.Client;
 public class OrderClient extends Client {
     public static final String ORDER_PATH = "/orders";
 
+    @Step("get order list")
+    public ValidatableResponse getOrders() {
+        return spec()
+                .queryParam("limit", 5)
+                .get(ORDER_PATH)
+                .then().log().all();
+    }
+
     @Step("creat order")
     public ValidatableResponse creatOrder(Order order) {
         return spec()
