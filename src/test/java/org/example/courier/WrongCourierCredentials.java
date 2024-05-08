@@ -1,17 +1,14 @@
-package org.example.Courier;
+package org.example.courier;
 
-public class CourierCredentials {
+public class WrongCourierCredentials {
     private String login;
     private String password;
 
-    public CourierCredentials(String login, String password) {
+    public WrongCourierCredentials(String login, String password) {
         this.login = login;
         this.password = password;
     }
-    public CourierCredentials() {
-    }
-    public static CourierCredentials from(Courier courier) {
-        return new CourierCredentials(courier.getLogin(), courier.getPassword());
+    public WrongCourierCredentials() {
     }
     public String getLogin() {
         return login;
@@ -27,5 +24,9 @@ public class CourierCredentials {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public static WrongCourierCredentials from(Courier courier) {
+        return new WrongCourierCredentials(courier.getLogin(), "1114");
     }
 }

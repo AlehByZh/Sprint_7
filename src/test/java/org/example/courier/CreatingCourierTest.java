@@ -1,4 +1,4 @@
-package org.example.Courier;
+package org.example.courier;
 
 import io.qameta.allure.junit4.DisplayName;
 import io.restassured.response.ValidatableResponse;

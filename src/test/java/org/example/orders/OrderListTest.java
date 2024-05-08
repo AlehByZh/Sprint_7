@@ -1,4 +1,4 @@
-package org.example.Orders;
+package org.example.orders;
 
 import io.qameta.allure.junit4.DisplayName;
 import io.restassured.response.ValidatableResponse;

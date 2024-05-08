@@ -1,4 +1,4 @@
-package org.example.Orders;
+package org.example.orders;
 
 public class OrderTrack {
     public int getTrack() {
