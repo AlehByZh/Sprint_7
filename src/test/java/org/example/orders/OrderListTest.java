@@ -5,7 +5,9 @@ import io.restassured.response.ValidatableResponse;
 import org.junit.Test;
 
 import static java.net.HttpURLConnection.HTTP_OK;
-import static org.hamcrest.CoreMatchers.notNullValue;
+import static org.hamcrest.Matchers.empty;
+import static org.hamcrest.core.Is.is;
+import static org.hamcrest.core.IsNot.not;
 
 public class OrderListTest {
     private final OrderClient orderClient = new OrderClient();
@@ -16,6 +18,6 @@ public class OrderListTest {
                        .assertThat()
                 .statusCode(HTTP_OK)
                 .and()
-                .body("orders", notNullValue());
+                .body("orders", is(not(empty())));
     }
 }
