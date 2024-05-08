@@ -63,5 +63,9 @@ public class AuthorizationCourierTest {
         WrongCourierCredentials wrongCreds = WrongCourierCredentials.from(courier);
         ValidatableResponse loginResponse = client.loginCourierWithWrongPassword(wrongCreds);
         check.loggedUnsuccessfullyWithRandom(loginResponse);
+
+        CourierCredentials creds = CourierCredentials.from(courier);
+        ValidatableResponse loginSuccessfullyResponse = client.loginCourier(creds);
+        courierId = check.loggedSuccessfully(loginSuccessfullyResponse);
     }
 }

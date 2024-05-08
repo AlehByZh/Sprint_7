@@ -36,6 +36,10 @@ public class CreatingCourierTest {
     @Test
     public void creatingExistingCourier() {
         var courier = Courier.generic();
+        client.createCourier(courier);
+        CourierCredentials creds = CourierCredentials.from(courier);
+        ValidatableResponse loginResponse = client.loginCourier(creds);
+        courierId = check.loggedSuccessfully(loginResponse);;
         ValidatableResponse createResponse = client.createCourier(courier);
         check.createdExistingCourier(createResponse);
     }

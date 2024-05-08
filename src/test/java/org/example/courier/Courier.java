@@ -17,7 +17,7 @@ public class Courier {
     }
 
     public static Courier generic() {
-        return new Courier("ninja", "1234", "Saske");
+        return new Courier("Quicksilver", "1234", "Maximoff");
     }
     public static Courier random() {
         return new Courier(RandomStringUtils.randomAlphabetic(5,15), "1111", "Vadik");
