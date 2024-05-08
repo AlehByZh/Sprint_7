@@ -31,27 +31,6 @@ public class CourierClient extends Client {
                 .delete(COURIER_PATH + "/" + id)
                 .then().log().all();
     }
-    @Step("creat courier without loggin")
-    public ValidatableResponse createCourierWithoutLoggin(Courier courier) {
-        return spec()
-                .body(courier)
-                .post(COURIER_PATH)
-                .then().log().all();
-    }
-    @Step("creat courier without password")
-    public ValidatableResponse createCourierWithoutPassword(Courier courier) {
-        return spec()
-                .body(courier)
-                .post(COURIER_PATH)
-                .then().log().all();
-    }
-    @Step("login courier without data")
-    public ValidatableResponse loginCourierWithoutData(Courier courier) {
-        return spec()
-                .body(courier)
-                .post(COURIER_PATH + "/login")
-                .then().log().all();
-    }
     @Step("login courier with wrong password")
     public ValidatableResponse loginCourierWithWrongPassword(WrongCourierCredentials wrongCreds) {
         return spec()

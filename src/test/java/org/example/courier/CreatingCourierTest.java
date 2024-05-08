@@ -43,14 +43,14 @@ public class CreatingCourierTest {
     @Test
     public void creatingCourierWithoutLastName() {
         var courier = Courier.withoutLoggin();
-        ValidatableResponse creatResponse = client.createCourierWithoutLoggin(courier);
+        ValidatableResponse creatResponse = client.createCourier(courier);
         check.didntCreateCourier(creatResponse);
     }
     @DisplayName("courier creating without password")
     @Test
     public void creatingCourierWithoutPassword() {
         var courier = Courier.withoutPassword();
-        ValidatableResponse creatResponse = client.createCourierWithoutPassword(courier);
+        ValidatableResponse creatResponse = client.createCourier(courier);
         check.didntCreateCourier(creatResponse);
     }
 }

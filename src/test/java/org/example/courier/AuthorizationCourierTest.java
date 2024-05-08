@@ -36,14 +36,14 @@ public class AuthorizationCourierTest {
     @Test
     public void authorizationWithoutLogin(){
         var courier = Courier.withoutLoggin();
-        ValidatableResponse loginResponse = client.loginCourierWithoutData(courier);
+        ValidatableResponse loginResponse = client.loginCourier(CourierCredentials.from(courier));
         check.loggedUnsuccessfully(loginResponse);
     }
     @Step("authorization without password")
     @Test
     public void authorizationWithoutPassword() {
         var courier = Courier.withoutPassword();
-        ValidatableResponse loginResponse = client.loginCourierWithoutData(courier);
+        ValidatableResponse loginResponse = client.loginCourier(CourierCredentials.from(courier));
         check.loggedUnsuccessfully(loginResponse);
     }
     @Step("authorization with random data")
